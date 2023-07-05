@@ -1,1 +1,1 @@
-require("twoskoopz")
+require('twoskoopz')
