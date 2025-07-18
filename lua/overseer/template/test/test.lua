@@ -1,12 +1,12 @@
 return {
-    name = "echo test",
-    builder = function()
-        return {
-            cmd  = {"echo"},
-            args = {"test"}
-        }
-    end,
-    condition = {
-        filetype = {"lua"},
-    },
+	name = "list directory",
+	builder = function()
+		return {
+			cmd = { "ll" },
+			-- args = {"test"}
+		}
+	end,
+	condition = {
+		filetype = { "lua" },
+	},
 }

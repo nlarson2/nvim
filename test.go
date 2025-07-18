@@ -1,6 +1,12 @@
 package main
 
+import (
+	"fmt"
+)
 
 func main() {
-	fmt.Println("HERE")
+	fmt.Println("stuff")
+	var test int = 23
+	fmt.Println(test)
+
 }

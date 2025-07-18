@@ -1,9 +1,9 @@
 return {
-    name = "echo test",
+    name = "echo test2",
     builder = function()
         return {
             cmd  = {"echo"},
-            args = {"test"}
+            args = {"test2"}
         }
     end,
     condition = {
