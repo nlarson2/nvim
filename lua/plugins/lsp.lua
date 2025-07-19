@@ -24,10 +24,6 @@ return {
         }
       })
 
-      nmap('gd', vim.lsp.buf.definition, '[G]oto [D]efinition')
-      nmap('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
-      nmap('gI', vim.lsp.buf.implementation, '[G]oto [I]mplementation')
-      nmap('<leader>D', vim.lsp.buf.type_definition, 'Type [D]efinition')
 
       local lspconfig = require('lspconfig')
       local util = require("lspconfig/util")
@@ -67,7 +63,7 @@ return {
               unusedwrite = true,
               useany = true,
             },
-            -- usePlaceholders = true,
+            usePlaceholders = true,
             completeUnimported = true,
             staticcheck = true,
             directoryFilters = { "-.git", "-.vscode", "-.idea", "-.vscode-test", "-node_modules" },
@@ -75,6 +71,11 @@ return {
           },
         },
       })
+      
+      nmap('gd', vim.lsp.buf.definition, '[G]oto [D]efinition')
+      nmap('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
+      nmap('gI', vim.lsp.buf.implementation, '[G]oto [I]mplementation')
+      nmap('<leader>D', vim.lsp.buf.type_definition, 'Type [D]efinition')
     end
   },
 }
