@@ -1,5 +1,8 @@
 return {
     "nvim-treesitter/nvim-treesitter",
+    dependencies = {
+        "maxmellon/vim-jsx-pretty"
+    },
     version = false,             -- last release is way too old and doesn't work on Windows
     build = ":TSUpdate",
     lazy = vim.fn.argc(-1) == 0, -- load treesitter early when opening a file from the cmdline
@@ -33,6 +36,7 @@ return {
             "jsdoc",
             "json",
             "jsonc",
+            "jsx",
             "lua",
             "luadoc",
             "luap",

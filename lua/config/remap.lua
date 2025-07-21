@@ -10,7 +10,7 @@ vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.listchars = { space = '_', tab = '>~' }
-        
+
 vim.opt.smartindent = true
 
 vim.opt.wrap = false
@@ -43,3 +43,12 @@ vim.keymap.set("n", "<leader>mr", "<c-w>l")
 -- OIL
 vim.keymap.set("n", "<leader>ee", "<CMD>Oil<CR>")
 
+--Diagnostic
+function ToggleVirtualText()
+    local current = vim.diagnostic.config().virtual_text
+    vim.diagnostic.config({
+        virtual_text = not current
+    })
+end
+
+vim.keymap.set("n", "<leader>dv", ToggleVirtualText, { desc = "Toggle Diagnostic Virtual Text" })
